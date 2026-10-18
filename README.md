@@ -51,6 +51,15 @@ roms/rogue.obj  demo game
 
 Demo `.obj` files are from [justinmeiners/lc3-vm](https://github.com/justinmeiners/lc3-vm) (`docs/supplies/`).
 
-## Next (NVIDIA extras)
+## Extras
 
-Planned add-ons: `--trace`, `--stats`, cache simulator, branch predictor, opcode unit tests, IPS benchmark.
+```powershell
+.\lc3-vm.exe --trace roms\halt.obj          # every instruction decoded
+.\lc3-vm.exe --stats roms\2048.obj          # opcode mix on exit / Ctrl+C
+.\lc3-vm.exe --trace --stats roms\halt.obj  # both
+```
+
+- `--trace` — PC, raw hex, mnemonic, R0–R7, N/Z/P (to stderr)
+- `--stats` — total instrs, loads/stores/branches, per-opcode counts
+
+Still planned: cache simulator, branch predictor, unit tests, IPS benchmark.
