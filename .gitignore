@@ -1,0 +1,5 @@
+*.exe
+*.o
+*.obj
+!roms/*.obj
+lc3-win-ref.c
