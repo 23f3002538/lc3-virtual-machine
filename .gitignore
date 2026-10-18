@@ -3,5 +3,3 @@
 *.obj
 !roms/*.obj
 lc3-win-ref.c
-heatmap.txt
-heatmap.html
